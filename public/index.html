@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Vue Currencies</title>
+  <script src="./js/bundle.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
 
-  </body>
+  <h1>Currency Exchange Calculator</h1>
+
+  <div id="app">
+
+    <ul id="v-for-rates" class="rates">
+      <li v-for="rate in rates">
+        {{rate}}
+      </li>
+    </ul>
+
+    <form>
+      <div class="form-amount">
+        <label for="amount">Amount</label>
+        <input type="text" id="amount">
+        <button v-on:click="formSubmit">Enter Amount</button>
+
+      </div>
+    </form>
+    <div id="Enter_Amount" v-if="formSubmit">
+      <h2>Amount Entered: {{ formSubmit }}</h2>
+    </div>
+  ul
+
+  </div>
+
+</body>
 </html>
